@@ -1,5 +1,5 @@
 ## Soal 1
-Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
+### Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
 ![Deskripsi Gambar](https://github.com/nrhlzanin/21_Nurhaliza-Anindya-Putri_Pemrograman-Mobile/blob/main/Week2/tugas1.png)
 
 ## Soal 2
