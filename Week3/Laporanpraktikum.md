@@ -44,7 +44,7 @@ if (test) {
 ```
 
 **Apa yang terjadi? Jika terjadi error, silakan perbaiki namun tetap menggunakan `if/else`.**
-img src="error1.png"
+![Deskripsi Gambar](error1.png)
 
 **Penjelasan:**
 Terjadi error karena `test` dideklarasikan dua kali dan juga karena kondisi `if` tidak valid untuk tipe `String`. Perbaikan kode adalah dengan menggunakan nama variabel yang berbeda dan memastikan tipe kondisi `if` adalah boolean.
@@ -71,7 +71,7 @@ void main() {
 }
 ```
 hasil run :
-img src="perbaikan.png"
+![Deskripsi Gambar](perbaikan.png)
 
 ## Praktikum 2: Menerapkan Perulangan "while" dan "do-while"
 
@@ -86,7 +86,8 @@ void main() {
   }
 }
 ```
-img src="error2.png"
+![Deskripsi Gambar](error2.png)
+
 **Penjelasan:**
 Terjadi error karena variabel `counter` tidak dideklarasikan. Sebelum menggunakan `counter` dalam loop `while`, Anda perlu mendeklarasikan dan menginisialisasinya terlebih dahulu.
 
@@ -100,7 +101,8 @@ void main() {
   }
 }
 ```
-img src="run2.png"
+![Deskripsi Gambar](run2.png)
+
 **Penjelasan Hasil Kode yang Diperbaiki:**
 Variabel `counter` diinisialisasi dengan nilai `0`. Kode yang diperbaiki akan mencetak angka dari `0` hingga `32`, satu per satu.
 
@@ -130,7 +132,7 @@ do {
 ```
 
 **Apa yang terjadi? Jika terjadi error, silakan perbaiki namun tetap menggunakan `do-while`.**
-img src="run3.png"
+![Deskripsi Gambar](run3.png)
 
 **Penjelasan:**
 Kode `do-while` memastikan bahwa blok kode dijalankan setidaknya satu kali sebelum memeriksa kondisi. Hasilnya adalah mencetak angka dari `0` hingga `76`, sama seperti dengan `while`.
@@ -163,7 +165,7 @@ void main() {
 }
 ```
 
-img src= "perbaikan2.png"
+![Deskripsi Gambar](perbaikan2.png)
 
 ### Langkah 3:
 Tambahkan kode program berikut di dalam `for-loop`, lalu coba eksekusi (Run) kode Anda.
@@ -176,7 +178,7 @@ print(index);
 ```
 
 **Apa yang terjadi? Jika terjadi error, silakan perbaiki namun tetap menggunakan `for` dan `break-continue`.**
-img src= "error4.png"
+![Deskripsi Gambar](error4.png)
 
 **Penjelasan:**
 Terjadi error karena di Dart, penggunaan if dan else if harus ditulis dengan huruf kecil, yaitu if dan else if. Selain itu, break dan continue hanya valid di dalam loop; mereka tidak dapat digunakan di luar loop. Dalam kode diatas break dan continue diletakkan di luar loop, yang menyebabkan kesalahan. Juga, variabel Index yang digunakan di luar loop harus konsisten dengan deklarasi variabel di dalam loop, yang menggunakan huruf kecil index.

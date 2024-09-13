@@ -30,8 +30,8 @@ bool isPrime(int number) {
 }
 ```
 
-img src="tugas1.png"
-img src="tugas2.png"
+![Deskripsi Gambar](tugas1.png)
+![Deskripsi Gambar](tugas2.png)
 
 3. Kumpulkan berupa link commit repo GitHub pada tautan yang telah disediakan di grup Telegram!
 
