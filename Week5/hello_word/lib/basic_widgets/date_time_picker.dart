@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class DateTimePicker extends StatefulWidget {
-  const DateTimePicker({Key? key}) : super(key: key);
+  const DateTimePicker({super.key});
 
   @override
   _DateTimePickerState createState() => _DateTimePickerState();
