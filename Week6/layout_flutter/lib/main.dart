@@ -7,6 +7,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget imageSection = Container(
+      padding: const EdgeInsets.all(16.0),
+      child: SizedBox(
+        width: 300,
+        height: 200,
+        child: Image.asset(
+          'assets/images/foto_wisata.jpg', 
+          fit: BoxFit.cover, 
+        ),
+      ),
+    );
+
     Widget titleSection = Container(
       padding: const EdgeInsets.all(32),
       child: Row(
@@ -18,7 +30,7 @@ class MyApp extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
-                    'Wisata Gunung di Batu',
+                    'Wisata Coban Rondo',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -75,6 +87,22 @@ class MyApp extends StatelessWidget {
       ],
     );
 
+    // Langkah 3
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Jika sedang berkunjung ke kawasan Malang atau kota wisata Batu,' 
+        ' maka jangan lupa mampir ke Wisata Coban Rondo. Coban Rondo adalah salah'
+        ' satu objek Wisata Air Terjun Di Malang yang sudah populer sejak puluhan tahun lalu.'
+        ' Daya tarik utamanya adalah air terjun. Seperti namanya, coban dalam bahasa Jawa berarti'
+        ' air terjun. Dulu, wisatawan yang datang ke sini bisa menikmati suasana alam, pegunungan, air terjun,' 
+        ' bahkan habitat asli monyet hutan. Saat ini, habitat monyet hutan tersebut sudah hilang. Sebagai gantinya,'
+        ' objek wisata ini mengikuti perkembangan zaman, yaitu dengan beberapa fasilitas seru yang bisa dilakukan para'
+        ' wisatawan selain menikmati keindahan alam.',
+        softWrap: true,
+      ),
+    );
+
     return MaterialApp(
       title: 'Flutter layout: Nurhaliza Anindya Putri dan 2241720016',
       home: Scaffold(
@@ -83,10 +111,12 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            titleSection,
+            imageSection,
+            titleSection,   
             buttonSection,
+            textSection,   
             const Center(
-              child: Text('Hello World'),
+              child: Text('Nurhaliza Anindya Putri dan 2241720016'),
             ),
           ],
         ),
