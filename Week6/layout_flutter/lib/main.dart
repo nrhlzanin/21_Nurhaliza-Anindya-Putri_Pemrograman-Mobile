@@ -7,18 +7,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget imageSection = Container(
-      padding: const EdgeInsets.all(16.0),
-      child: SizedBox(
-        width: 300,
-        height: 200,
-        child: Image.asset(
-          'assets/images/foto_wisata.jpg', 
-          fit: BoxFit.cover, 
-        ),
-      ),
-    );
-
     Widget titleSection = Container(
       padding: const EdgeInsets.all(32),
       child: Row(
@@ -36,7 +24,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Text(
+                Text(
                   'Batu, Malang, Indonesia',
                   style: TextStyle(
                     color: Colors.grey,
@@ -45,7 +33,7 @@ class MyApp extends StatelessWidget {
               ],
             ),
           ),
-          const Icon(
+          Icon(
             Icons.star,
             color: Colors.red,
           ),
@@ -54,8 +42,7 @@ class MyApp extends StatelessWidget {
       ),
     );
 
-    // Langkah 1
-    Column buildButtonColumn(Color color, IconData icon, String label) {
+    Column _buildButtonColumn(Color color, IconData icon, String label) {
       return Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -76,29 +63,21 @@ class MyApp extends StatelessWidget {
       );
     }
 
-    // Langkah 2
     Color color = Theme.of(context).primaryColor;
     Widget buttonSection = Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        buildButtonColumn(color, Icons.call, 'CALL'),
-        buildButtonColumn(color, Icons.near_me, 'ROUTE'),
-        buildButtonColumn(color, Icons.share, 'SHARE'),
+        _buildButtonColumn(color, Icons.call, 'CALL'),
+        _buildButtonColumn(color, Icons.near_me, 'ROUTE'),
+        _buildButtonColumn(color, Icons.share, 'SHARE'),
       ],
     );
 
-    // Langkah 3
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: const Text(
         'Jika sedang berkunjung ke kawasan Malang atau kota wisata Batu,' 
-        ' maka jangan lupa mampir ke Wisata Coban Rondo. Coban Rondo adalah salah'
-        ' satu objek Wisata Air Terjun Di Malang yang sudah populer sejak puluhan tahun lalu.'
-        ' Daya tarik utamanya adalah air terjun. Seperti namanya, coban dalam bahasa Jawa berarti'
-        ' air terjun. Dulu, wisatawan yang datang ke sini bisa menikmati suasana alam, pegunungan, air terjun,' 
-        ' bahkan habitat asli monyet hutan. Saat ini, habitat monyet hutan tersebut sudah hilang. Sebagai gantinya,'
-        ' objek wisata ini mengikuti perkembangan zaman, yaitu dengan beberapa fasilitas seru yang bisa dilakukan para'
-        ' wisatawan selain menikmati keindahan alam.',
+        ' maka jangan lupa mampir ke Wisata Coban Rondo...',
         softWrap: true,
       ),
     );
@@ -109,12 +88,17 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter layout demo'),
         ),
-        body: Column(
+        body: ListView( 
           children: [
-            imageSection,
-            titleSection,   
+            Image.asset(
+              'images/foto_wisata.jpg',
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            titleSection,
             buttonSection,
-            textSection,   
+            textSection,
             const Center(
               child: Text('Nurhaliza Anindya Putri dan 2241720016'),
             ),
