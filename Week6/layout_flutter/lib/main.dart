@@ -12,13 +12,11 @@ class MyApp extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            // Soal 1: Letakkan Column di dalam Expanded
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start, 
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Soal 2: Baris pertama teks di dalam Container
                 Container(
-                  padding: const EdgeInsets.only(bottom: 8), 
+                  padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
                     'Wisata Gunung di Batu',
                     style: TextStyle(
@@ -26,21 +24,55 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
+                const Text(
                   'Batu, Malang, Indonesia',
-                  style: TextStyle(color: Colors.grey), 
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
               ],
             ),
           ),
-          // Soal 3: Ikon bintang dan teks "41"
-          Icon(
+          const Icon(
             Icons.star,
             color: Colors.red,
           ),
           const Text('41'),
         ],
       ),
+    );
+
+    // Langkah 1
+    Column buildButtonColumn(Color color, IconData icon, String label) {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, color: color),
+          Container(
+            margin: const EdgeInsets.only(top: 8),
+            child: Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+                color: color,
+              ),
+            ),
+          ),
+        ],
+      );
+    }
+
+    // Langkah 2
+    Color color = Theme.of(context).primaryColor;
+    Widget buttonSection = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        buildButtonColumn(color, Icons.call, 'CALL'),
+        buildButtonColumn(color, Icons.near_me, 'ROUTE'),
+        buildButtonColumn(color, Icons.share, 'SHARE'),
+      ],
     );
 
     return MaterialApp(
@@ -52,8 +84,9 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             titleSection,
+            buttonSection,
             const Center(
-              child: Text('Hello World'), 
+              child: Text('Hello World'),
             ),
           ],
         ),
